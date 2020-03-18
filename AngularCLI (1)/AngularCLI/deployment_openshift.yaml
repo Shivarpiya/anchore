@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: angular
+  namespace: demo123
+spec:
+  selector:
+    matchLabels:
+      app: angular1
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: angular1
+    spec:
+      containers:
+        - name: angular1
+          image: senthilcontainerregistry.azurecr.io/angular-image:latest
+          ports:
+            - containerPort: 8080          
+---   
+apiVersion: v1
+kind: Service  
+metadata: 
+  name: angular
+  namespace:  demo123
+spec: 
+  selector: 
+    app: angular1 
+  ports: 
+  - protocol: TCP 
+    port: 8080 
+    targetPort: 8080
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: demoapp
+  namespace: demo123
+spec:
+  to:
+    kind: Service
+    name: angular
+  port:
+    targetPort: 8080
+---
+apiVersion: autoscaling/v2beta1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: autoscale
+  namespace: demo123
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: angular
+  minReplicas: 2
+  maxReplicas: 10
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        targetAverageUtilization: 1

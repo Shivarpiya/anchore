@@ -1,0 +1,343 @@
+/* You can add global styles to this file, and also import other style files */
+/*--/navigation --*/
+a.navbar-brand {
+    font-size: 2.8em;
+}
+li.nav-item a {
+    font-size: 1em;
+    display: block;
+    padding: 8px 20px;
+    clear: both;
+    font-weight: 600;
+    line-height: 1.42857143;
+    color: #22;
+    letter-spacing: 1px;
+}
+li.nav-item a:hover {
+    color: #009688;
+}
+li.nav-item {
+    margin: 0 1em;
+}
+.agile-banner_nav {
+    width: 100%;
+}
+.bg-light {
+    background-color: #5A92CB;
+    background-color: #5A92CB;
+}
+.navbar-light .navbar-brand, .navbar-light .navbar-toggler {
+    color: #333;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding: 0;
+    font-weight: 600;
+	margin: 0;
+}
+span.display {
+    font-size: 14px;
+    display: block;
+    font-weight: 600;
+    color: #009688;
+    text-align: center;
+    margin-top: -10px;
+    letter-spacing: 3px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #333;
+    font-weight: 600;
+}
+.navbar-light .navbar-nav .open > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.open, .navbar-light .navbar-nav .nav-link.active {
+    color: #009688;
+    text-decoration: underline;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #009688;
+    text-decoration: underline;
+}
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover, .navbar-light .navbar-toggler:focus, .navbar-light .navbar-toggler:hover {
+    color: #2b3945;
+}
+/*--//navigation --*/
+
+
+
+
+.carousel-caption {
+	bottom: 14em;
+	z-index: 10;
+	text-align: left;
+}
+
+
+.carousel-item {
+	height: 45em;
+	background-color: #777;
+}
+
+.carousel-item>img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	height: 32rem;
+}
+
+.marketing .col-lg-4 {
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
+
+.bottom-sub-grid.ser {
+	margin-top: 1.5em;
+	margin-bottom: 0;
+}
+
+.marketing h2 {
+	font-weight: 400;
+}
+
+.marketing .col-lg-4 p {
+	margin-right: .75rem;
+	margin-left: .75rem;
+}
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+	margin: 5rem 0;
+	/* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+
+.featurette-heading {
+	font-weight: 300;
+	line-height: 1;
+	letter-spacing: -.05rem;
+}
+
+/*--/slider--*/
+
+.carousel-item {
+	background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(assets/images/banner.jpg) no-repeat;
+	background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(assets/images/banner.jpg) no-repeat;
+	background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(assets/images/banner.jpg) no-repeat;
+	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(assets/images/banner.jpg) no-repeat;
+	background-size: cover;
+}
+
+.carousel-item.item2 {
+	background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(assets/images/banner1.jpg) no-repeat;
+	background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(assets/images/banner1.jpg) no-repeat;
+	background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(assets/images/banner1.jpg) no-repeat;
+	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(assets/images/banner1.jpg) no-repeat;
+	background-size: cover;
+}
+
+.carousel-item.item3 {
+	background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(assets/images/banner2.jpg) no-repeat;
+	background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(assets/images/banner2.jpg) no-repeat;
+	background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(assets/images/banner2.jpg) no-repeat;
+	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(assets/images/banner2.jpg) no-repeat;
+	background-size: cover;
+}
+
+.carousel-item.item4 {
+	background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(assets/images/banner3.jpg) no-repeat;
+	background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(assets/images/banner3.jpg) no-repeat;
+	background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(assets/images/banner3.jpg) no-repeat;
+	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(assets/images/banner3.jpg) no-repeat;
+	background-size: cover;
+}
+
+.carousel-caption h2,
+.carousel-caption h3 {
+	font-size: 4em;
+    font-weight: 700;
+	letter-spacing: 2px;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.37);
+}
+.carousel-caption h2 span, .carousel-caption h3 span {
+    display: block;
+}
+.carousel-caption p {
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.carousel-caption a {
+    background: #009688;
+    color: #fff;
+    padding: 15px 65px 15px 25px;
+    border-radius: 40px;
+    letter-spacing: 2px;
+    font-size: 15px;
+    position: relative;
+}
+.carousel-caption a:hover {
+    background: #fff;
+    color: #009688;
+}
+.carousel-caption a:hover.carousel-caption span.fas{
+    background: #009688 !important;
+    color: #fff !important;
+}
+.carousel-indicators {
+    bottom: 20%;
+    left: -64%;
+    cursor: pointer;
+    margin: 0;
+}
+
+.carousel-caption span.fas  {
+    position: absolute;
+    right: 1%;
+    top: 5%;
+    background: #fff;
+    font-size: 13px;
+    width: 44px;
+    height: 44px;
+    color: #009688;
+    margin-left: 5px;
+    line-height: 44px;
+    text-align: center;
+    border-radius: 30px;
+}
+.bnr-button {
+	margin-top: 2em;
+}
+
+.carousel-control {
+	line-height: 42em;
+}
+
+.carousel-indicators li {
+	display: inline-block;
+	max-width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	-ms-border-radius: 50%;
+	margin: 0 5px;
+	background: #fff;
+}
+
+.carousel-indicators .active {
+	background: #009688;
+}
+
+/*-- footer --*/
+footer h3{
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 2px;
+	color: #eee;
+}
+footer {
+    background: #222;
+}
+footer p {
+    font-size: 15px;
+    color: #999;
+    line-height: 28px;
+    letter-spacing: 1px;
+}
+footer .posts p.middle {
+    border-top: 1px dotted #fff;
+    border-bottom: 1px dotted #fff;
+}
+footer p span {
+	display: block;
+    font-size: 15px;
+}
+.links a{
+	display:block;
+    color: #999;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.links i.fas {
+    margin-right: 2px;
+}
+.links a:hover{
+    color: #fff;
+}
+footer  form {
+    border: 1px solid #888;
+    width: 100%;
+    border-radius: 30px;
+}
+footer [type="email"] {
+    outline: none;
+    padding: 12px 25px;
+    color: #999;
+    font-size: 13px;
+    width: 85%;
+    border: none;
+    background: none;
+    letter-spacing: 1px;
+}
+button.btn1 {
+    color: #999;
+    border: none;
+    padding: 10px 0;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    background: none;
+    cursor: pointer;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+    float: right;
+    width: 15%;
+}
+address h4,address p strong {
+    font-size: 18px;
+    color: #bbb;
+    letter-spacing: 1px;
+    font-weight: 600;
+	text-decoration: underline;
+}
+address p {
+    font-size: 15px;
+    color: #929292;
+}
+address p a {
+    color: #999;
+}
+address p a:hover {
+    color: #fff;
+}
+.copyright p {
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: #999;
+}
+.copyright p a {
+    color: #eee;
+}
+.copyright p a:hover {
+    color: #009688;
+}
+.copyright {
+    background: #1b1b1b;
+}
+.social li {
+    display: inline-block;
+}
+.social li a {
+    color: #999;
+    font-size: 15px;
+}
+.social li a:hover {
+    color: #fff;
+}
+
+/*-- footer --*/

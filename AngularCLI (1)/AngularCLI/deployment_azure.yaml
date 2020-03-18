@@ -1,0 +1,84 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: angular-service45
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: angular
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: angular
+    spec:
+      containers:
+        - name: angular
+          image: akshayrc/angular-application1:508
+          ports:
+            - containerPort: 8080         
+---   
+#apiVersion: v1
+#kind: Service  
+#metadata: 
+  #name: angular-service1
+  #namespace:  default
+#spec: 
+  #selector: 
+    #app: angular
+  #ports: 
+  #- protocol: TCP 
+    #port: 8080 
+    #targetPort: 8080
+---
+kind: Service 
+apiVersion: v1 
+metadata: 
+  name: angular-service45
+spec: 
+  selector: 
+    app: angular 
+  ports: 
+  - protocol: TCP 
+    port: 8080 
+    targetPort: 8080 
+  type: LoadBalancer     
+---
+#apiVersion: networking.k8s.io/v1beta1
+#kind: Ingress
+#metadata:
+  #name: angular-app-ingress
+#spec:
+  #backend:
+    #serviceName: angular-app
+    #servicePort: 8080
+---
+#apiVersion: autoscaling/v2beta1
+#kind: HorizontalPodAutoscaler
+#metadata:
+  #name: autoscale12
+  #namespace: default
+#spec:
+  #scaleTargetRef:
+    #apiVersion: apps/v1
+    #kind: Deployment
+    #name: angular123
+  #minReplicas: 2
+  #maxReplicas: 10
+  #metrics:
+    #- type: Resource
+      #resource:
+        #name: cpu
+        #targetAverageUtilization: 1
+#---
+#apiVersion: v1
+#kind: Secret
+#metadata:
+  #name: mysecret1
+#type: Opaque
+#stringData:
+  #config.yaml: |-
+    #apiUrl: "https://senthilcontainerregistry.azurecr.io"
+    #username: $(username)
+    #password: $(password)

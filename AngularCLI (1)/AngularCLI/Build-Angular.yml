@@ -1,0 +1,48 @@
+#Updated t#Updated th#UpdUpdated through iTAFUpdated through iTAF#Updated through iTAF ated through iTAF rough iTAF hrough iTAF
+resources:
+- repo: self
+queue:
+  name: Hosted VS2017
+  demands: npm
+
+
+steps:
+- task: Npm@1
+  displayName: npm install
+  inputs:
+    workingDir: AngularCLI
+    verbose: false
+
+- task: Npm@1
+  displayName: npm Build
+  inputs:
+    command: custom
+    workingDir: AngularCLI
+    verbose: false
+    customCommand: 'run build'
+
+- task: Npm@1
+  displayName: Run test
+  inputs:
+    command: custom
+    workingDir: AngularCLI
+    verbose: false
+    customCommand: 'run test'
+
+- task: PublishTestResults@2
+  displayName: Publish Test Results **/TESTS-PhantomJS*.xml
+  inputs:
+    testResultsFiles: '**/TESTS-PhantomJS*.xml'
+
+- task: ArchiveFiles@2
+  displayName: Archive AngularCLI/dist/app1
+  inputs:
+    rootFolderOrFile: 'AngularCLI/dist/app1'
+    includeRootFolder: false
+    archiveFile: Angular.zip
+
+- task: PublishBuildArtifacts@1
+  displayName: Publish Artifact
+  inputs:
+    PathtoPublish: Angular.zip
+
