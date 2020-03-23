@@ -6,7 +6,7 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws --version
-      - docker login --username=shivapriya.mv0607@gmail.com --password=Priya0607&
+      - docker login --username=shivapriyasupreeth --password=Priya!234&
   build:
     commands:
       - echo Build started on `date`
